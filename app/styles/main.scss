@@ -3,6 +3,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+body {
+  background: url('../images/opportunity-arm.jpg') center fixed;
+  background-size: cover;
+}
+
+.light-body {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: white;
+  margin: 10px;
+  padding: 3px;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
