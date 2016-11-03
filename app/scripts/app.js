@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/manifest', {
+        templateUrl: 'views/manifest.html',
+        controller: 'ManifestCtrl',
+        controllerAs: 'manifest'
+      })
       .otherwise({
         redirectTo: '/'
       });
