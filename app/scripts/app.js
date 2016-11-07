@@ -37,6 +37,16 @@ angular
         controller: 'ManifestCtrl',
         controllerAs: 'manifest'
       })
+      .when('/cameras', {
+        templateUrl: 'views/cameras.html',
+        controller: 'CamerasCtrl',
+        controllerAs: 'cameras'
+      })
+      .when('/history', {
+        templateUrl: 'views/history.html',
+        controller: 'HistoryCtrl',
+        controllerAs: 'history'
+      })
       .otherwise({
         redirectTo: '/'
       });

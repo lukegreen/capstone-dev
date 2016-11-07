@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="capstoneDevApp" ng-controller="ManifestCtrl">
+  <body ng-app="capstoneDevApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -39,6 +39,9 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/manifest">Manifest</a></li>
+              <li><a ng-href="#/history">History</a></li>
+              <li><a ng-href="#/cameras">Cameras</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
             </ul>
@@ -49,16 +52,12 @@
 
     <div class="container">
     <div ng-view=""></div>
-    <p style="color: white">{{roverName}}</p>
-    <p style="color: white">{{roverLaunchDate}}</p>
-    <p style="color: white">{{roverLandingDate}}</p>
-    <p style="color: white">{{roverStatus}}</p>
-    <p style="color: white">{{roverTotalPhotos}}</p>
+
     </div>
 
     <div class="footer">
       <div class="container light-body">
-        <p><span class="glyphicon glyphicon-heart"></span>by Luke Green, 2016</p>
+        <p><span class="glyphicon glyphicon-heart"></span> by Luke Green, 2016</p>
       </div>
     </div>
 
@@ -97,6 +96,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/roverdata.js"></script>
         <script src="scripts/controllers/manifest.js"></script>
+        <script src="scripts/controllers/cameras.js"></script>
+        <script src="scripts/controllers/history.js"></script>
         <!-- endbuild -->
 </body>
 </html>
