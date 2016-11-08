@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 /**
  * @ngdoc overview
@@ -27,6 +27,23 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/curiosity', {
+        templateUrl: 'views/curiosity.html',
+        controller: 'CuriosityCtrl',
+        controllerAs: 'curiosity'
+      })
+      .when('/opportunity', {
+        templateUrl: 'views/opportunity.html',
+        controller: 'OpportunityCtrl',
+        controllerAs: 'opportunity'
+      })
+      .when('/spirit', {
+        templateUrl: 'views/spirit.html',
+        controller: 'SpiritCtrl',
+        controllerAs: 'spirit'
+      })
+
+      //other views
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
