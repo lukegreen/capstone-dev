@@ -16,13 +16,20 @@
     </div>
   </script>
 
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="oneAtATime">
+      Open only one at a time
+    </label>
+  </div>
+
   <uib-accordion close-others="oneAtATime">
     <div uib-accordion-group class="panel-default" heading="Manifest" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-      <ul>
-        <li>Launch Date</li>
-        <li>Landing Date</li>
-        <li>Mission Status</li>
-        <li>Photos taken</li>
+      <ul ng-controller="ManifestCtrl">
+        <li>Launch Date: {{roverLaunchDate}}</li>
+        <li>Landing Date: {{roverLandingDate}}</li>
+        <li>Mission Status: {{roverStatus}}</li>
+        <li>Photos taken: {{roverTotalPhotos}}</li>
       </ul>
     </div>
     <div uib-accordion-group class="panel-default" heading="Cameras" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">

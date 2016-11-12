@@ -13,11 +13,13 @@ angular.module('capstoneDevApp')
     // ...
 
     // Public API here
-     return $resource('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=soma08IimfFaJ8eSYCZpnsQxLEr01sMJflVPLtZx', {}, {
+     return $resource('https://api.nasa.gov/mars-photos/api/v1/rovers/:roverName/photos?sol=:maxSol&page=:pageNum&api_key=soma08IimfFaJ8eSYCZpnsQxLEr01sMJflVPLtZx', {}, {
        query: {
          method:'GET',
          params:{
-
+           roverName: "curiosity",
+           maxSol: "1000",
+           pageNum: "1"
         },
          isArray:false
        }

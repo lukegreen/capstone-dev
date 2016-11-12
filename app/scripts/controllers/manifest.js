@@ -23,8 +23,8 @@ angular.module('capstoneDevApp')
     $scope.roverStatus = data.photos[0].rover.status;
     $scope.roverTotalPhotos = data.photos[0].rover.total_photos;
     console.log($scope.roverStatus);
-
-
   });
+
+
 
 });
