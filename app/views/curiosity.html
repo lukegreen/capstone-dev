@@ -1,4 +1,4 @@
-<div ng-controller="CuriosityCtrl">
+<div ng-controller="ManifestCtrl">
   <script type="text/ng-template" id="group-template.html">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -25,7 +25,8 @@
 
   <uib-accordion close-others="oneAtATime">
     <div uib-accordion-group class="panel-default" heading="Manifest" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-      <ul ng-controller="ManifestCtrl">
+      <ul>
+        <li>Rover: {{roverName}}</li>
         <li>Launch Date: {{roverLaunchDate}}</li>
         <li>Landing Date: {{roverLandingDate}}</li>
         <li>Mission Status: {{roverStatus}}</li>
@@ -33,7 +34,8 @@
       </ul>
     </div>
     <div uib-accordion-group class="panel-default" heading="Cameras" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-      Choose a camera.
+      <p>Most recent image:</p>
+      <img class="rover-photo" ng-src="{{mostRecent}}">
     </div>
     <div uib-accordion-group class="panel-default" heading="History" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
       <h3>Curiosity</h3>
