@@ -17,9 +17,9 @@ angular.module('capstoneDevApp')
        query: {
          method:'GET',
          params:{
-           roverName: 'curiosity',
-           maxSol: '1000',
-           pageNum: '1'
+           roverName: "curiosity",
+           maxSol: "1000",
+           pageNum: "1"
         },
          isArray:false
        }
