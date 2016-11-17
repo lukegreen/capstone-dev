@@ -33,37 +33,10 @@ angular
         controller: 'CuriosityCtrl',
         controllerAs: 'curiosity'
       })
-      .when('/opportunity', {
-        templateUrl: 'views/opportunity.html',
-        controller: 'OpportunityCtrl',
-        controllerAs: 'opportunity'
-      })
-      .when('/spirit', {
-        templateUrl: 'views/spirit.html',
-        controller: 'SpiritCtrl',
-        controllerAs: 'spirit'
-      })
-
-      //other views
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
-      })
-      .when('/manifest', {
-        templateUrl: 'views/manifest.html',
-        controller: 'ManifestCtrl',
-        controllerAs: 'manifest'
-      })
-      .when('/cameras', {
-        templateUrl: 'views/cameras.html',
-        controller: 'CamerasCtrl',
-        controllerAs: 'cameras'
-      })
-      .when('/history', {
-        templateUrl: 'views/history.html',
-        controller: 'HistoryCtrl',
-        controllerAs: 'history'
       })
       .otherwise({
         redirectTo: '/'
