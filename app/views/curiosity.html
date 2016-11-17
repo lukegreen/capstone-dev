@@ -23,8 +23,8 @@
     </label>
   </div>
 
-  <uib-accordion close-others="oneAtATime">
-    <div uib-accordion-group class="panel-default" heading="Manifest" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+  <uib-accordion close-others="true">
+    <div uib-accordion-group class="panel-default" heading="Manifest" is-open="false">
       <ul>
         <li>Rover: {{roverName}}</li>
         <li>Launch Date: {{roverLaunchDate}}</li>
@@ -33,11 +33,11 @@
         <li>Photos taken: {{roverTotalPhotos}}</li>
       </ul>
     </div>
-    <div uib-accordion-group class="panel-default" heading="Cameras" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+    <div uib-accordion-group class="panel-default" heading="Cameras" is-open="false">
       <p>Most recent image:</p>
       <img class="rover-photo" ng-src="{{mostRecent}}">
     </div>
-    <div uib-accordion-group class="panel-default" heading="History" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+    <div uib-accordion-group class="panel-default" heading="History" is-open="false">
       <h3>Curiosity</h3>
       <p>This is where we put the history of the mission</p>
     </div>
