@@ -1,4 +1,4 @@
-<div ng-controller="CuriosityCtrl">
+<div ng-controller="RoverviewCtrl">
   <script type="text/ng-template" id="group-template.html">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -32,10 +32,8 @@
       Choose a camera.
     </div>
     <div uib-accordion-group class="panel-default" heading="History" is-open="false">
-      <h3>Curiosity</h3>
-      <p>Curiosity was launched from Cape Canaveral on November 26, 2011, at 15:02 UTC aboard the MSL spacecraft and landed on Aeolis Palus in Gale Crater on Mars on August 6, 2012, 05:17 UTC.[1][12] The Bradbury Landing site was less than 2.4 km (1.5 mi) from the center of the rover's touchdown target after a 563,000,000 km (350,000,000 mi) journey.[8][13]</p>
-      <p>The rover's goals include: investigation of the Martian climate and geology; assessment of whether the selected field site inside Gale Crater has ever offered environmental conditions favorable for microbial life, including investigation of the role of water; and planetary habitability studies in preparation for future human exploration.[14][15]</p>
-      <p>Curiosity's design will serve as the basis for the planned Mars 2020 rover. In December 2012, Curiosity's two-year mission was extended indefinitely.[16]</p>
+      <h3>{{roverName}}</h3>
+      <div id="historyPara"></div>
     </div>
   </uib-accordion>
 

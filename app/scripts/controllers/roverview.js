@@ -2,17 +2,16 @@
 
 /**
  * @ngdoc function
- * @name capstoneDevApp.controller:CuriosityCtrl
+ * @name capstoneDevApp.controller:RoverviewCtrl
  * @description
- * # CuriosityCtrl
+ * # RoverviewCtrl
  * Controller of the capstoneDevApp
  */
 angular.module('capstoneDevApp')
-  .controller('CuriosityCtrl', function ($scope, roverData) {
-
+  .controller('RoverviewCtrl', function ($scope, roverData) {
     //get data from API
     function init(){
-      $scope.roverData = roverData.query();
+      $scope.roverData = roverData.query({roverName: $scope.roverName});
       $scope.roverData.$promise.then(function(data){
         $scope.maxSol = data.photos[0].rover.max_sol;
         $scope.roverDataTwo = roverData.query({
@@ -30,6 +29,14 @@ angular.module('capstoneDevApp')
         //Most recent photo
         $scope.mostRecent = data.photos[0].img_src;
         console.log($scope.mostRecent);
+        //Insert relevant history
+        if ($scope.roverName === "Curiosity") {
+          document.getElementById("historyPara").innerHTML("<p>Info about Curiosity</p>");
+        } else if ($scope.roverName === "Opportunity") {
+          document.getElementById("historyPara").innerHTML("<p>Info about Opportunity</p>");
+        } else {
+          document.getElementById("historyPara").innerHTML("<p>Info about Spirit</p>");
+        }
       });
     });
   }
