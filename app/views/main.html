@@ -1,9 +1,5 @@
 <div class="jumbotron">
   <h1>RoverTrak</h1>
-  <p class="lead">
-    Welcome to the RoverTrak development site. This is where we will wire up the functionality of the RoverTrak mobile app!
-  </p>
-
 </div>
 
 <!--<div class="main-buttons">
@@ -15,9 +11,9 @@
 </div>-->
 
 <div class="main-buttons">
-<div class="btn-group btn-group" role="group">
-  <button type="button" class="btn btn-success" role="button" ng-click="roverName = 'Curiosity'">Curiosity</button>
-  <button type="button" class="btn btn-success" role="button" ng-click="roverName = 'Opportunity'">Opportunity</button>
-  <button type="button" class="btn btn-success" role="button" ng-click="roverName = 'Spirit'">Spirit</button>
+<div class="btn-group btn-group" role="group" ng-controller="RoverviewCtrl">
+  <button type="button" class="btn btn-success" role="button" name="curiosity" ng-click="setName($event)"><a ng-href="#/roverView">Curiosity</a></button>
+  <button type="button" class="btn btn-success" role="button" name="opportunity" ng-click="setName($event)"><a ng-href="#/roverView">Opportunity</a></button>
+  <button type="button" class="btn btn-success" role="button" name="spirit" ng-click="setName($event)"><a ng-href="#/roverView">Spirit</a></button>
 </div>
 </div>
